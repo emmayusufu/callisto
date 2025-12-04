@@ -21,8 +21,27 @@ export default function Home() {
   }, [router]);
 
   return (
-    <main style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh" }}>
-      <p>Creating room...</p>
+    <main style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      height: "100vh",
+      background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
+      fontFamily: "system-ui, -apple-system, sans-serif",
+    }}>
+      <div style={{ textAlign: "center" }}>
+        <h1 style={{
+          fontSize: "48px",
+          fontWeight: 700,
+          background: "linear-gradient(90deg, #667eea 0%, #764ba2 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          marginBottom: "16px",
+        }}>
+          Callisto
+        </h1>
+        <p style={{ color: "#64748b", fontSize: "18px" }}>Creating your room...</p>
+      </div>
     </main>
   );
 }
