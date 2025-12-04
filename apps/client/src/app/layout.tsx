@@ -5,7 +5,8 @@ import "./globals.css";
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mediasoup Learning Demo",
+  title: "Callisto",
+  description: "Real-time video conferencing",
 };
 
 export default function RootLayout({
