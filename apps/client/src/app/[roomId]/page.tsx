@@ -224,7 +224,7 @@ export default function Room() {
       <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
         <div>
           <h3>You</h3>
-          <video ref={videoRef} autoPlay playsInline muted style={{ width: "400px", background: "#000" }} />
+          <video ref={videoRef} autoPlay playsInline muted style={{ width: "400px", background: "#000", transform: "scaleX(-1)" }} />
         </div>
         <div ref={remoteVideosContainerRef} style={{ display: "flex", gap: "20px", flexWrap: "wrap" }} />
       </div>
