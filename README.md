@@ -1,60 +1,67 @@
-# Mediasoup Learning Demo
+# Callisto
 
-Welcome to the Media Soup Learning Demo repository! This project serves as an educational platform to demonstrate the use of Media Soup for real-time media communication. It includes both a Next.js client application and a backend server, organized as separate folders within the same repository.
+Real-time video conferencing built with mediasoup WebRTC.
+
+## Features
+
+- **Auto-generated rooms** – Visit the app and get a unique shareable room URL
+- **Multi-participant** – Multiple users can join the same room
+- **WebRTC powered** – Low-latency video/audio using mediasoup SFU
+- **Monorepo architecture** – pnpm workspaces + Turborepo
 
 ## Project Structure
 
-The repository is structured into two main folders:
-
-1. **Client**: A Next.js application located in the `/client` folder, designed to run on `localhost:3000`.
-2. **Backend**: A server located in the `/backend` folder, running on `localhost:4000`.
-
-Both components are crucial for the demo's functionality and should be run concurrently.
+```
+callisto/
+├── apps/
+│   ├── client/          # Next.js frontend
+│   └── server/          # Node.js + mediasoup backend
+├── packages/
+│   └── shared/          # Shared types and utilities
+├── pnpm-workspace.yaml
+└── turbo.json
+```
 
 ## Prerequisites
 
-Before starting, ensure you have installed:
+- Node.js 18+
+- pnpm 9+
 
-- Node.js (latest stable version recommended)
+## Getting Started
 
-- npm (usually installed with Node.js)
+```bash
+# Install dependencies
+pnpm install
 
-## Installation and Setup
+# Run both client and server in dev mode
+pnpm dev
+```
 
-### General Setup
+- **Client**: http://localhost:3000
+- **Server**: http://localhost:4000
 
-1. Clone this repository to your local machine.
-2. Open a terminal and navigate to the cloned repository's root directory.
+## How It Works
 
-### Backend Server
+1. Visit `http://localhost:3000`
+2. You're redirected to a unique room (e.g., `/aB3xK9mNpQ`)
+3. Share the URL with others to join the same room
+4. Video streams are exchanged via mediasoup SFU
 
-1. Change directory to the backend folder: `cd backend`.
-2. Run `npm install` to install all necessary dependencies.
-3. Start the server by executing `npm run dev`.
-4. Verify that the server is active on `localhost:4000`.
+## Scripts
 
-**Important**: Initialize the backend server first before starting the client.
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start all apps in development mode |
+| `pnpm build` | Build all packages |
+| `pnpm lint` | Lint all packages |
+| `pnpm clean` | Clean build artifacts |
 
-### Client Application
+## Tech Stack
 
-1. Open a new terminal and navigate to the repository's root directory.
-2. Change to the client folder: `cd client`.
-3. Execute `npm install` to install dependencies.
-4. After confirming the backend server is running, start the client with `npm run dev`.
-5. Access the client at `localhost:3000`.
+- **Frontend**: Next.js 14, React, mediasoup-client
+- **Backend**: Node.js, Express, Socket.IO, mediasoup
+- **Build**: pnpm, Turborepo, TypeScript
 
-## Usage
+## License
 
-With both the server and client running, you can now explore the functionalities of the Media Soup Learning Demo via your web browser
-on `localhost:3000`.
-This setup allows you to understand the interaction between client and server in real-time media communication.
-
-## Contributing
-
-Contributions to improve or enhance this demo are highly appreciated. Feel free to fork the repository, make changes, and submit a pull request for review.
-
-## Support
-
-For issues or queries, please open an issue in this repository with a clear description of your concern.
-
-Enjoy your journey with the Media Soup Learning Demo!
+MIT
