@@ -14,10 +14,14 @@ Real-time video conferencing built with mediasoup WebRTC.
 ```
 callisto/
 ├── apps/
-│   ├── client/          # Next.js frontend
-│   └── server/          # Node.js + mediasoup backend
+│   ├── client/
+│   └── server/
+│       ├── src/config.ts
+│       ├── src/handlers/
+│       ├── src/lib/
+│       └── src/types.ts
 ├── packages/
-│   └── shared/          # Shared types and utilities
+│   └── shared/
 ├── pnpm-workspace.yaml
 └── turbo.json
 ```
@@ -49,12 +53,12 @@ pnpm dev
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start all apps in development mode |
-| `pnpm build` | Build all packages |
-| `pnpm lint` | Lint all packages |
-| `pnpm clean` | Clean build artifacts |
+| Command      | Description                        |
+| ------------ | ---------------------------------- |
+| `pnpm dev`   | Start all apps in development mode |
+| `pnpm build` | Build all packages                 |
+| `pnpm lint`  | Lint all packages                  |
+| `pnpm clean` | Clean build artifacts              |
 
 ## Tech Stack
 
